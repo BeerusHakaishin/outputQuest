@@ -10,14 +10,14 @@ export class CreateOnomatopiaComponent implements OnInit {
 
   newOnomatopia: string | undefined;
 
-  @Output() public sendOnomatopiaToParent: EventEmitter<any> = new EventEmitter();
+  @Output() public sendOnomatopiaToDaddy: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   createOnomatopia(): void {
-    this.sendOnomatopiaToParent.emit(this.newOnomatopia);
+    this.sendOnomatopiaToDaddy.emit(this.newOnomatopia);
   }
   
 }
